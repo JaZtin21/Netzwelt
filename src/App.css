@@ -1,18 +1,27 @@
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
+*{
+  box-sizing: border-box;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+:root{
+  font-size: 16px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+body p{
+  margin: 0;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +44,202 @@
   to {
     transform: rotate(360deg);
   }
+}
+.Logincont{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+
+}
+.Logincont > div{
+  background-color: rgb(247, 247, 247);
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 25%;
+
+}
+.loginformcont{
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  filter: drop-shadow(1px 2px 2px  rgba(0, 0, 0, 0.106));
+
+}
+.loginformcont h2{
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 2px solid rgba(0, 158, 166, 0.245);
+  text-align: center;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.508);
+}
+.Logincont > div > form{
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 100%;
+
+
+}
+.Logincont>div>form>label {
+ color: rgba(0, 0, 0, 0.47);
+ font-size: 1.2rem;
+ font-weight: 600;
+ margin-bottom: -0.3rem;
+
+
+}
+
+.Logincont>div>form>input {
+
+
+  border: 2px solid rgba(5, 138, 136, 0.509);
+  padding: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.33));
+  color: #282c3486;
+
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 5px;
+  height: 2.5rem;
+
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+
+  -webkit-text-fill-color: #282c3486;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.Logincont>div>form>input:focus {
+
+  outline: 2px solid rgba(5, 138, 136, 0.211);
+  border: 2px solid rgba(5, 138, 136, 0.242);
+
+}
+.Logincont>div>form>input:not(:focus) {
+
+
+  border: none;
+
+}
+.Logincont > div > form > button{
+  max-width: 30%;
+  width: 100%;
+  align-self: flex-end;
+  border: 2px solid rgba(5, 138, 136, 0.279);
+  padding: 0.3rem;
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.33));
+   color: #ffffff;
+  font-size: 0.8rem;
+    font-weight: 600;
+      border-radius: 5px;
+   transition: background-color 0.2s ease, color 0.2s ease;
+   height: 2rem;
+    background-color: rgba(99, 228, 235, 0.678);
+
+}
+.Logincont>div>form>button:hover {
+
+  max-width: 30%;
+  align-self: flex-end;
+  background-color: rgba(179, 255, 156, 0.966);
+  color: white;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.381));
+  cursor: pointer;
+}
+ul {
+  margin-top: 0;
+}
+.topnav{
+  background-color: #61dafb;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.topnav p span{
+  text-decoration: underline;
+}
+.topnav button{
+  background-color: #ffffff;
+  color: rgb(0, 157, 255);
+  padding: 0.5rem;
+  font-weight: 600;
+  border: 2px solid rgb(0, 170, 255);
+  cursor: pointer;
+}
+.topnav button:hover {
+  background-color: #f5f5f5;
+  color: rgb(0, 157, 255);
+  padding: 0.5rem;
+  font-weight: 600;
+  border: 2px solid rgb(0, 170, 255);
+  cursor: pointer;
+}
+ul,
+#myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none;
+  /* Safari 3.1+ */
+  -moz-user-select: none;
+  /* Firefox 2+ */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  /* Safari */
+
+ transform: rotate(90deg);
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
 }
